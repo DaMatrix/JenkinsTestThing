@@ -6,5 +6,7 @@ package net.daporkchop.jenkinstesthing;
 public class Main {
     public static void main(String... args) {
         System.out.println(new Wrapper(args.length));
+
+        System.out.pintln("This line does not compile!");
     }
 }

@@ -46,8 +46,7 @@ pipeline {
             deleteDir()
 
             withCredentials([string(credentialsId: 'discord_webhook', variable: 'discordWebhook')]) {
-                discordSend thumbnail: "https://static.miraheze.org/valkyrienskieswiki/6/63/Logo_128.png",
-                        //successful: currentBuild.resultIsBetterOrEqualTo('SUCCESS'),
+                discordSend thumbnail: "https://www.daporkchop.net/toembed/profilepic-256p.png",
                         result: currentBuild.currentResult,
                         description: getDiscordMessage(),
                         link: env.BUILD_URL,
