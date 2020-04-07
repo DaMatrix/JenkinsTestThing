@@ -12,8 +12,7 @@ String getDiscordMessage() {
 
     msg += "\n**Artifacts:**\n"
     currentBuild.rawBuild.getArtifacts().each {
-        msg += String.format("- fileName: %s, displayPath: %s, href: %s\n", it.getFileName(), it.getDisplayPath(), it.getHref())
-        //msg += "- [" + it.getFileName() + "](" + env.BUILD_URL + "artifact/" + it.getFileName() + ")\n"
+        msg += "- [" + it.getDisplayPath() + "](" + env.BUILD_URL + "artifact/" + it.getHref() + ")\n"
     }
 
     if (msg.length() > 2048) {
